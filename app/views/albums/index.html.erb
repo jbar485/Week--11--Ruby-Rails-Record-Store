@@ -1,0 +1,12 @@
+<h1>Albums</h1>
+
+<% if @albums.any? %>
+    <% @albums.each do |album| %>
+      <p><%= link_to album.name, album_path(album) %></p>
+    <% end %>
+<% else %>
+  <p>There are no albums yet.</p>
+<% end %>
+
+
+<p><%= link_to "Create new album", new_album_path %></p>
